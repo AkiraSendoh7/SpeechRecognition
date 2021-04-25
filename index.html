@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Tradução de Texto/Voz para Libras</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="tabindex.css" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <h1>Online Teaching</h1>
+        </header>
+        <main>
+            <div id="tabs">
+                <div class="tab-links">
+                    <button data-id="voice-to-text" data-open>Voz para texto</button>
+                    <button data-id="text-to-voice">Texto para Voz</button>
+                </div>
+
+                <div class="tab-content">
+                    <section id="voice-to-text">
+                        <label for="Speech Recognition" style="margin-bottom: 30px;">
+                            Aperte no botão para conseguir falar:
+                        </label>
+                        <button class="talk" onclick="record()">Diga</button>
+                        <textarea class="content" rows="6" cols="60" placeholder="Saída da sua voz em texto"
+                            style="font-weight: 900;" readonly></textarea>
+                    </section>
+                    <section id="text-to-voice">
+                        <form>
+                            <label for="Speech Recognition" style="margin-bottom: 40px;">
+                                Digite para traduzir a voz:
+                            </label>
+                            <button class="talk" onclick="text_to_speech()">Confirma</button>
+                            <textarea name="" id="text-input" rows="6" cols="60"
+                                placeholder="Digite o texto que deseja traduzir">
+                            </textarea>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="speechReco.js"></script>
+    <script src="tabindex.js"></script>
+    <script src="text-to-voice.js"></script>
+</body>
+
+</html>
